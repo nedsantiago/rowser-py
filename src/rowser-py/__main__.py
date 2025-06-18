@@ -1,4 +1,4 @@
-from lib import cli
+from libs import cli
 
 
 def main() -> None:
