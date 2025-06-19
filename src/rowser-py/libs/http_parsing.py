@@ -19,8 +19,8 @@ def parse_for_terminal(webpage: str) -> str:
     output_text: str = ""
     output_text += f"{title}\n"
     # output_text = output_text + f"{soup.find_all("link")=}\n"
-    output_text += f"{soup.find_all("span")=}\n"
-    output_text += f"{soup.find_all("form")=}\n"
+    output_text += f"{soup.find_all("span")}\n"
+    output_text += f"{soup.find_all("form")}\n"
 
     return output_text
 
