@@ -2,6 +2,9 @@ import sys
 from libs import http_requests
 from libs import http_parsing
 from rich import print
+from rich.panel import Panel
+from rich.padding import Padding
+from rich.layout import Layout
 
 
 def run_app() -> None:
@@ -33,7 +36,20 @@ def run_app() -> None:
     viewable: str = http_parsing.parse_for_terminal(response)
 
     # Print to Terminal
-    print(viewable)
+    layout = Layout()
+    layout.split_row(
+        Panel(viewable),
+        Layout(name="lower")
+    )
+    print(layout)
+    # print(Panel("Hello, [red]World!", title="Welcome", subtitle="Thank you"), "Hello")
+    # print(
+    #     Padding(
+    #         "Hello",
+    #         (1, 4),
+    #         expand=False
+    #     )
+    # )
 
     # Listen to other commands from user
 

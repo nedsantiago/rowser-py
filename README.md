@@ -19,6 +19,18 @@ In Summary, Firefox + Vimium has:
 
 While the terminal-based implementation does not solve point #2, a future GUI-based implementation using Firefox's Gecko engine would be an interesting future project.
 
+## Notes
+
+This the currently considered procedure for rendering a website using the terminal.
+1. Loop through the tags of a website until the terminal is filled
+2. If tag is recognized (e.g. form, title, header, paragraph, etc.)
+3. Rowser will choose an appropriate render object for the tag.
+4. Renders the object to the terminal
+5. Ends Loop
+6. If user makes an action
+7. Rowser will identify the change and re-render the appropriate objects. For example, scrolling down will delete the upper object and renders the object below.
+
 ## Milestone
 
 - [x] Achieved a text parser that prints to terminal - 2025-06-18
+- [x] Began making a terminal user interface using Rich - 2025-06-19
