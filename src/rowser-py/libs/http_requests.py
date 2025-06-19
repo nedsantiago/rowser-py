@@ -13,8 +13,6 @@ def get_request(url: str) -> str:
     except ValueError as e:
         raise e
 
-    print(f"{response.encoding=}")
-    print(f"{type(response.content)=}")
     # Return string data
     return response.text
 
