@@ -1,6 +1,7 @@
 import sys
 from libs import http_requests
 from libs import http_parsing
+from rich import print
 
 
 def run_app() -> None:
